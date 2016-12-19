@@ -8,6 +8,13 @@ $(document).ready( function(){
 
 });
 
+function printNews() {
+    var str = "NUEVAS RECETAS";
+    var result = str.bold();
+    document.getElementById('noticia').innerHTML = result;
+}
+
+
 //$('.js-back').toggle();
 
 /*
