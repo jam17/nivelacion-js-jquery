@@ -22,6 +22,12 @@ function printNews() {
 * marcado el atributo "highlighted" como TRUE
 */
 function renderHighlightedRecipes(recipesArray) {
+	for (var i = 0; i < recipesArray.length; i++) {
+		if (recipesArray[i].highlighted == true) {
+			var arreglo = recipesArray[i];
+			renderRecipe(arreglo);
+		}
+	}
 	console.log('Recipes: ', recipesArray);
 }
 
