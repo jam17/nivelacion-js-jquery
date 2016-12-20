@@ -37,8 +37,14 @@ function renderHighlightedRecipes(recipesArray) {
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-recipe.html"
 */
+
+
 function renderRecipe(recipe) {
-	console.log('Voy a pintar la receta: ', recipe);
+	var title = recipe.title; //saco nombre de la receta
+	var name = (recipe.source).name; //nombre del autor de la receta
+	var img = recipe.name; // a cada imagen le va poner el nombre de la receta
+	$('.list-recipes').append('<a class="item-recipe" href="#"><span class="attribution"><span class="title-recipe">'+title+'</span><span class="metadata-recipe"><span class="author-recipe">'+name+' </span><span class="bookmarks-recipe"><span class="icon-bookmark"></span></span></span></span><img src="img/recipes/320x350/'+img+'.jpg"/></a>');
+	//console.log('Voy a pintar la receta: ', recipe);
 }
 
 
